@@ -1,3 +1,11 @@
+<?php
+$name = "SomeName";
+$value = 100;
+$expiration = time() + (60*60*24*7);
+setcookie($name,$value,$expiration);
+session_start();
+$_SESSION['name'] = 'zdrkpkaksi bepce sex?';
+?>
 <?php include "functions.php"; ?>
 <?php include "includes/header.php";?>
 
@@ -14,11 +22,12 @@
 
 
 			<article class="main-content col-xs-8">
-			
-		
-	
-	<?php 
 
+
+	<?php
+    if(isset($_GET['penis'])) {
+        print_r($_GET);
+    }
 	/*  Create a link saying Click Here, and set 
 	the link href to pass some parameters and use the GET super global to see it
 
@@ -29,8 +38,9 @@
 	
 	?>
 
-
-
+                <?php echo $_SESSION['name'];
+                session_destroy(); ?>
+                <a href="9.php?penis=big&maikati=moq">click here</a>
 
 
 </article><!--MAIN CONTENT-->

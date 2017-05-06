@@ -16,7 +16,10 @@
 	
 	
 	<?php  
-
+$password = "penisi penisi penisi sdifji";
+//$password = mysqli_real_escape_string(null,$password);
+$crypted = crypt($password,'$6$20$gjfnertjdxskdirl$');
+echo $crypted;
 	/*  Step 1 -Make a variable with some text as value
 
 		Step 2 - Use crypt() function to encrypt it
