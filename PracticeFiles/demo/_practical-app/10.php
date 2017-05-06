@@ -13,7 +13,9 @@
 
 	
 	<?php  
-
+$file = "example.txt";
+$handle = fopen($file, 'w');
+fclose($handle);
 	/*  Step 1: Use the Make a class called Dog
 
 		Step 2: Set some properties for Dog, Example, eye colors, nose, or fur color
