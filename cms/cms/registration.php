@@ -106,7 +106,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
  
     <!-- Page Content -->
     <div class="container">
-    
 <section id="login">
     <div class="container">
         <div class="row">
