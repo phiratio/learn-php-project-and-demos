@@ -1,45 +1,39 @@
-tinymce.init({selector:'textarea'});
+tinymce.init({selector: 'textarea'});
 
-$(document).ready(function(){
+$(document).ready(function () {
 
-	$('#selectAllBoxes').click(function(event){
+    $('#selectAllBoxes').click(function (event) {
 
-	if(this.checked) {
+        if (this.checked) {
 
-	$('.checkBoxes').each(function(){
+            $('.checkBoxes').each(function () {
 
-	    this.checked = true;
+                this.checked = true;
 
-	});
+            });
 
-} else {
-
-
-	$('.checkBoxes').each(function(){
-
-	    this.checked = false;
-
-	});
+        } else {
 
 
-	}
+            $('.checkBoxes').each(function () {
 
-	});
+                this.checked = false;
 
-
-
-
+            });
 
 
+        }
 
- var div_box = "<div id='load-screen'><div id='loading'></div></div>";
+    });
 
- $("body").prepend(div_box);
 
- $('#load-screen').delay(50).fadeOut(40, function(){
-    $(this).remove();
- });
+    var div_box = "<div id='load-screen'><div id='loading'></div></div>";
 
+    $("body").prepend(div_box);
+
+    $('#load-screen').delay(50).fadeOut(40, function () {
+        $(this).remove();
+    });
 
 
 });
@@ -48,24 +42,23 @@ $(document).ready(function(){
 function loadUsersOnline() {
 
 
-	$.get("functions.php?onlineusers=result", function(data){
+    $.get("functions.php?onlineusers=result", function (data) {
 
-		$(".usersonline").text(data);
+        $(".usersonline").text(data);
 
 
-	});
-
+    });
 
 
 }
 
 
-setInterval(function(){
+setInterval(function () {
 
-	loadUsersOnline();
+    loadUsersOnline();
 
 
-},500);
+}, 500);
 
 
 
